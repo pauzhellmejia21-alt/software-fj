@@ -33,6 +33,7 @@ class SistemaSoftwareFJ:
         logger.info("Servicio registrado: %s", servicio.nombre)
         return servicio
 
+    # Busca un cliente por su identificador; si no lo encuentra, lanza un error.
     def buscar_cliente(self, identificador):
         cliente = next((c for c in self.clientes if c.identificador == str(identificador)), None)
         if cliente is None:
